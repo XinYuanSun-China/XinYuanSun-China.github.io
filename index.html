@@ -1,5 +1,5 @@
-<!DOCTYPE html >
-<html >
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>我的驿站</title>
@@ -8,11 +8,11 @@
  
 </style>
 </head>
- 
+
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="nav">
   <tr>
-    <td><img src="images/logo2.png"  height="100" /></td>
+    <td><img src="images/logo2.png" height="100" /></td>
     <td width="100" align="center"><a href="index.html">主页</a></td>
     <td width="100" align="center"><a href="haoyou.html">My LOVER</a></td>
     <td width="100" align="center"><a href="photo.html">我的相册</a></td>
@@ -27,28 +27,28 @@
   <tr>
     <td><table width="760" border="0" cellspacing="10" cellpadding="0">
       <tr>
-        <td><p >我的个人简介。 </p>
-          <p >姓名：孙欣远lz</p>
-          <p >性别：男</p>
-          <p >生日：2007年4月28日</p>
-          <p >学校：舟山市田家炳中学</p>
-          <p >爱好：什么都可以~</p>
-          <p >你看&#8212;&#8212;</p></td>
+        <td><p>我的个人简介。</p>
+          <p>姓名：孙欣远lz</p>
+          <p>性别：男</p>
+          <p>生日：2007年4月28日</p>
+          <p>学校：舟山市田家炳中学</p>
+          <p>爱好：什么都可以~</p>
+          <p>你看——</p></td>
         <td><img src="images/1.jpg" width="383" height="289" /></td>
       </tr>
       <tr>
         <td><img src="images/2.jpg" width="400" /></td>
         <td>
-          <p >好吧，我承认我兴趣广泛。 </p>
-          <p >包括吃喝玩乐睡。 </p>
-          <p >还有陪zyw玩😍 </p>
-          <p ></p></td>
+          <p>好吧，我承认我兴趣广泛。</p>
+          <p>包括吃喝玩乐睡。</p>
+          <p>还有陪zyw玩😍</p>
+          <p></p></td>
       </tr>
       <tr>
-        <td><p >9</p>
-          <p >9 </p>
-          <p >9 </p>
-          <p >9 </p></td>
+        <td><p>9</p>
+          <p>9</p>
+          <p>9</p>
+          <p>9</p></td>
         <td><img src="images/3.jpg" width="400" /></td>
       </tr>
     </table></td>
@@ -57,5 +57,36 @@
     <td>&nbsp;</td>
   </tr>
 </table>
+
+<!-- 添加以下流星雨代码 -->
+<script>
+function createMeteor() {
+    var meteor = document.createElement("div");
+    meteor.className = "meteor";
+    meteor.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(meteor);
+
+    var duration = Math.random() * 5 + 1; // 随机持续时间（1到6秒）
+    var delay = Math.random() * 3; // 随机延迟（0到3秒）
+
+    setTimeout(function() {
+        meteor.style.transition = "none";
+        meteor.style.height = "0px";
+        meteor.style.opacity = "0";
+
+        setTimeout(function() {
+            document.body.removeChild(meteor);
+        }, 2000); // 等待2秒后删除流星元素
+    }, (delay + duration) * 1000);
+}
+
+function startMeteorShower() {
+    setInterval(createMeteor, 500); // 每隔0.5秒创建一个流星
+}
+
+startMeteorShower();
+</script>
+<!-- 流星雨代码结束 -->
+
 </body>
 </html>
