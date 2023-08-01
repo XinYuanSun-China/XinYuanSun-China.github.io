@@ -60,6 +60,20 @@ background-attachment: fixed;"
     </style>
 </head>
 <body>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.animation = 'fall 2s linear infinite';
+            }, 100);
+        }
+
+        setInterval(createHeart, 900);
+    </script>
 </body>
 </html>
 <!DOCTYPE html>
