@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我们相遇的倒计时</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        #countdown {
+            font-size: 2em;
+            margin: 20px;
+        }
+        #heart {
+            color: red;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>我们相遇的倒计时</h1>
+    <div id="countdown"></div>
+    <div id="heart">❤️</div>
+
+    <script>
+        // 设置相遇的日期
+        var countDownDate = new Date("2025-07-01 00:00:00").getTime();
+
+        // 更新倒计时的时间
+        var x = setInterval(function() {
+
+            // 获取当前的时间
+            var now = new Date().getTime();
+
+            // 计算剩余的时间
+            var distance = countDownDate - now;
+
+            // 计算天、小时、分钟和秒
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // 显示倒计时
+            document.getElementById("countdown").innerHTML = days + "天 " + hours + "小时 "
+            + minutes + "分钟 " + seconds + "秒 ";
+
+            // 如果倒计时结束，显示一条消息
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "我们已经相遇！";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
