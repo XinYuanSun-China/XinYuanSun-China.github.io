@@ -1,6 +1,8 @@
 $('#login-button').click(function (event) {
 	var userName=document.getElementById("userName").value;
     var pwd=document.getElementById("pwd").value;
+	userName="生日快乐"
+	pwd="666"
     if(userName=="生日快乐" &&  pwd=="666"){
 			event.preventDefault();
 			$('form').fadeOut(500);
