@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<head>
+    <meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    overflow: hidden; /* 隐藏页面的滚动条 */
+  }
+  #gifContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 设置gif容器高度为视口高度 */
+  }
+  .gif-item {
+    width: 3.33%; /* 一行显示三个gif */
+    height: 3.33vh; /* 每个gif占据屏幕的1/3高度 */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .gif-item img {
+    width: 100%; /* 图片宽度100%填充容器 */
+    height: 100%; /* 图片高度100%填充容器 */
+    object-fit: cover; /* 保持纵横比填充容器 */
+  }
+</style>
+</head>
+<body>
+<audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
+    <source src="../music/ji.mp3"></source>
+    Your browser isn't invited for super fun audio time.
+</audio>
+<!-- Container for GIFs and button -->
+<div id="gifContainer"></div>
+
+<script>
+const gifUrl = 'img/6.gif';  // 替换为你的GIF URL
+const soundUrl = '../music/ji.mp3';  // 替换为你的音频 URL
+
+// 预加载音频
+const audio = new Audio(soundUrl);
+audio.load();
+
+// 创建并追加带有音频的GIF图像
+function appendGifWithSound() {
+  const img = document.createElement('img');
+  img.src = gifUrl;
+  img.alt = 'GIF';
+  
+  const gifContainer = document.getElementById('gifContainer');
+  const gifItem = document.createElement('div');
+  gifItem.classList.add('gif-item');
+  gifItem.appendChild(img);
+  gifContainer.appendChild(gifItem);
+
+
+}
+
+// 创建1000个GIF实例
+for (let i = 0; i < 1000; i++) {
+  appendGifWithSound();
+}
+
+</script>
+</body>
+  <script src='../js/jquery.js'></script>
+  <!-- <script src="js/auto-play.js"></script> -->
+  <!-- <script src="js/birthday-cake.js"></script> -->
+  <audio src="../music/ji.mp3" autoplay="autoplay" loop="loop"/>
+</body>
+
+</html>
