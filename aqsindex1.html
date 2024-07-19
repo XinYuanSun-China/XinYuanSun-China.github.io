@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="static/nigeerhuox16.ico.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>love</title>
-    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-<button id="goToPage">爱情树</button>
-<script>
-  document.getElementById('goToPage').addEventListener('click', function() {
-    window.location.href = 'https://xinyuansun-china.github.io/';
-  });
-</script>
 <img src="static/music.png" style="position: fixed;z-index: 10001;top:10px;right:10px;" onclick="let m = document.querySelector('.song-audio-autoplay'); if (m.paused ) {m.play(); this.className = 'rotateImages'} else {m.pause(); this.className = ''}">
 <audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
     <source src="static/wanan-yanrenzhong.mp3"></source>
     Your browser isn't invited for super fun audio time.
 </audio>
+
+
 <style type="text/css">
     .rotateImages{
         -webkit-animation:myRotate 10s linear infinite;
@@ -106,11 +102,13 @@
         <div id="pBg1cNNqT-an-obj-26"><img height="290" width="161"
                                            src="./static/boy-girl/2000(7).jpg"></div>
     </div>
+<button onclick="window.location.href='index.html'" type="button" id="add">2024生日快乐</button>
 
 </div>
 
 
-<script src="config1.js"></script>
+<script src="js/config1.js"></script>
 <script src="static/index.js"></script>
+<audio src="static/wanan-yanrenzhong.mp3" autoplay="autoplay" loop="loop"/>
 </body>
 </html>
